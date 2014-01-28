@@ -1,0 +1,224 @@
+\documentclass{beamer}
+\mode<presentation> {
+%\usetheme{Madrid}
+%\usetheme{default}
+\usepackage{color}
+\definecolor{bottomcolour}{rgb}{0.21,0.11,0.21}
+\definecolor{middlecolour}{rgb}{0.21,0.11,0.21}
+\setbeamercolor{structure}{fg=white}
+\setbeamertemplate{frametitle}[default]%[center]
+\setbeamercolor{normal text}{bg=black, fg=white}
+\setbeamertemplate{background canvas}[vertical shading]
+[bottom=bottomcolour, middle=middlecolour, top=black]
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{navigation symbols}{} %no nav symbols
+\setbeamercolor{block title}{use=structure,fg=white,bg=structure.fg!50!red!50!blue!100!green}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!5!white!10!bg,fg=white}
+\setbeamertemplate{navigation symbols}{}
+}
+
+\usepackage{graphicx} 
+\usepackage{booktabs} 
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}  
+\usepackage{geometry}     
+\usepackage[francais]{babel} 
+\usepackage{eurosym}
+\usepackage{verbatim}
+\usepackage{ragged2e}
+\justifying
+
+\input{cc_beamer}
+
+\title[Démystifions les Darknets]{Démystifions les Darknets} 
+\author{Genma}
+
+\begin{document}
+
+%% Titlepage
+\begin{frame}
+	\titlepage
+	\vfill
+	\begin{center}
+		\CcGroupByNcSa{0.83}{0.95ex}\\[2.5ex]
+		{\tiny\CcNote{\CcLongnameByNcSa}}
+		\vspace*{-2.5ex}
+	\end{center}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Les Darknets}
+\justifying{
+On entend de plus en plus parler des Darknets, des endroits sombres de l’Internet, là où se cachent les pirates, hackers, et autres pédo-nazis. 
+\\~\\On a de plus en plus d’articles de journalistes qui lancent TOR et qui pondent ensuite un article à sensation pour faire de l’audience. 
+\\~\\Mais qu’en est-il vraiment de ces fameux Darknets.
+}
+\end{frame}
+
+\begin{frame}
+\frametitle{Internet}
+\begin{block}{Ne pas confondre web et Internet}
+\justifying{
+Internet est un réseau de réseaux ; ce n’est pas un seul réseau mais tous un ensemble de réseaux et sous réseaux reliés entre eux.
+\\~\\Sur ces réseaux, il y a le réseau que l’on connait, le "Web". 
+\\~\\ Mais dans ces mêmes tuyaux circulent les mails, des flux vidéos, tout un tas d’autres choses et d’autres flux.
+}
+\end{block}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Les Darknets}
+\begin{block}{Tentons de définir un Darknet}
+\justifying{
+Un darknet est un réseau privé virtuel dont les utilisateurs sont considérés comme des personnes de confiance. 
+\\~\\La plupart du temps, ces réseaux sont de petite taille, souvent avec moins de dix utilisateurs chacun.
+\\~\\ Un darknet peut être créé par n’importe quel type de personne et pour n’importe quel objectif, mais la technique est le plus souvent utilisée spécifiquement pour créer des réseaux de partage de fichiers.
+}
+\end{block}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Le Deepweb}
+
+\begin{block}{Le Deepweb}
+\justifying{
+Correspond à tout le web qui est non indexé par Google.
+\\~\\Tout le web non visible
+\\~\\Un document soumis à mot de passe pour consultation, un espace soumis à mot de passe...
+\\~\\Tout ce qui se consulte via un navigateur et qu'a pas de lien dans Google est du Deepweb.
+}
+\end{block}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\Huge{\centerline{Il n'y a pas un mais DES darknets}}
+\end{frame}
+%----------------------------------------------------------------------------------------
+\begin{frame}
+
+\frametitle{Les Darknets}
+\begin{block}{Un darknet est un réseau privé}
+\justifying{
+Un Darknet, ce peut très bien être une LanParty privée mais sur Internet. 
+\\~\\Ou un réseau d’Entreprise auquel on se connecte via un VPN.
+\\~\\Ou les réseaux de P2P privé.
+\\~\\On peut assimiler ces réseaux dans le réseau à des Darknet, d’une certaine façon.
+}
+\end{block}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+
+\frametitle{Les Darknets}
+\begin{block}{Interconnexion de hackerspace}
+\justifying{DN42, ChaosVPN (CCC), Anonet... De plus en plus de hackerspaces interconnectent leurs réseaux via des tunnels VPN (ou des liaisons radio longue distance dans certains cas), ce qui permet :
+\begin{itemize}
+\item De crypter tous les échanges de données entre les hackerspaces participants
+\item  De contourner censure / filtrage / throttling et autres débilités du genre
+\item  De mutualiser / redonder les services d’infrastructure (DNS, IRC, backups...)
+\item  De faciliter la mise à disposition d’informations et de services entre les hackerspaces reliés
+\item  Routage vers les darknets IP (DN42, ChaosVPN, AgoraLink, Anonet, ...)
+\end{itemize}
+}
+\end{block}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+
+\frametitle{Tor}
+
+\begin{block}{TOR}
+\justifying{
+Acronyme de The Onion Router, littéralement : « le routeur oignon » et est un réseau mondial décentralisé de routeurs, organisés en couches, appelés nœuds de l’oignon, dont la tâche est de transmettre de manière anonyme des flux TCP. 
+\\~\\
+C’est ainsi que tout échange Internet basé sur TCP peut être rendu anonyme en utilisant Tor. 
+\\~\\
+Le site officiel : \url{https://www.torproject.org}
+}
+\end{block}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+
+\frametitle{Tor}
+
+\begin{block}{TOR - les services cachés}
+\justifying{
+Tor permet aux clients et aux relais d’offrir des services cachés. Autrement dit, vous pouvez offrir un serveur web, un serveur SSH, etc, sans révéler votre adresse IP de ses utilisateurs.
+\\~\\
+Avec un moteur de recherche comme DuckDuckGo ou une page wikipedia, il possible de connaître certains de ces services. 
+\\~\\
+Un wiki au sein de ces services cachés regroupant lui-même tout une série d’adresses en .onion.
+\\~\\
+Il faut donc utiliser un navigateur configuré pour utiliser le réseau Tor pour aller sur ces sites \textit{underground}.
+}
+\end{block}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{I2P}
+\begin{block}{I2P - Invisible Internet Project }
+\justifying{
+Réseau anonyme, offrant une simple couche réseau logicielle de type réseau overlay, que les applications peuvent employer pour envoyer de façon anonyme et sécurisée des informations entre elles. La communication est chiffrée de bout en bout.  
+\\~\\
+On est donc là fasse à une sorte de VPN en Peer2Peer, chacun étant un relais possible pour les autres. Je n’ai pas encore testé ce réseau, ce sera l’occasion de rédiger différents articles quand ce sera fait.
+}
+\end{block}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{I2P}
+\begin{block}{I2P - les eepsites}
+\justifying{
+Les Eepsites sont des sites qui sont hébergés de façon anonyme au sein du réseau I2P. 
+\\~\\Exemple : - The wiki is also available via I2P tunnel :  \\npkn2tsan5be7abni7dex7t65jevtifwj2u37uk3xuhvabb6yzwq.b32.i2p
+\\~\\Un logiciel comme EepProxy peut localiser ces sites par le biais des couches d’identification cryptographiques stockées dans le fichier hosts.txt trouvé dans le répertoire du programme I2P. 
+\\~\\Une connexion au réseau I2P est donc nécessaire pour accéder à ces eepsites.
+}
+\end{block}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Freenet}
+\begin{block}{Freenet}
+\justifying{
+Freenet est un réseau informatique anonyme et distribué construit sur l'Internet.
+\\~\\ Il vise à permettre une liberté d'expression et d'information totale fondée sur la sécurité de l'anonymat, et permet donc à chacun de lire comme de publier du contenu. 
+\\~\\Il offre la plupart des services actuels d'Internet (courriel, Web, etc.).
+}
+\end{block}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Le cypherspace}
+\justifying{
+Le Cipherspace ou cypherspace est l’équivalent chiffré du cyberespace. 
+}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\Huge{\centerline{Merci de votre attention.}}
+\Huge{\centerline{Place aux questions. Débattons...}}
+\end{frame}
+
+\end{document}
+	
